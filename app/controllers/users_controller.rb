@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+
+  def index
+    respond_to do |format|
+      format.json { render json: User.where(identification: params[:identification]).first  }
+      format.html
+    end
+  end
   def update
 
     user = User.where(identification: params[:id]).first

@@ -28,5 +28,6 @@ app.factory("User", function($resource) {
     return $resource("users/:id", { id: '@id' }, {
         index:   { method: 'GET', isArray: true, responseType: 'json' },
         update:  { method: 'PUT', responseType: 'json' },
+        find_by_identificacion:  { method: 'GET', responseType: 'json' }
     });
 })

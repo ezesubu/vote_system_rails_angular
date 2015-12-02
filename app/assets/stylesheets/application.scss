@@ -27,7 +27,7 @@ $color-blue: #2C4693;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 header {
-  background-image: url("background-head.png");
+  background-image: image-url("background-head.png");
   background-position: center;
   background-color: #2C4693;
   margin: 0 auto;
@@ -62,7 +62,12 @@ h1 {
   font-family: GistLight;
   font-weight: bold;
 }
-
+.sweet-alert{
+  h2, p{
+    font-family: GistLight;
+    color: $color-blue;
+  }
+}
 .btn-nominados {
   font-family: GistLight;
   margin-top: 30px;
@@ -73,8 +78,6 @@ h1 {
 .main-content {
   padding: 50px 0px;
 }
-
-
 
 
 footer {
@@ -121,10 +124,16 @@ footer {
 .well-nominante {
   background-color: #FFF;
 }
+.logo-movile{
+   img{
+   padding: 15px 0px;
+    margin: 0 auto;
+   }
+}
 
 @media (min-width: 980px) {
   .logo-primary {
-    margin-left: 100px;
+    margin-left: 50px;
   }
   .sub-logo {
     border-bottom: 1px solid #FFF;

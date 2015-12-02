@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   end
   resources :votes, defaults: {format: :json}
 
-  resources :users, defaults: {format: :json}
+  resources :users, defaults: {format: :json} do
+    collection do
+      get 'get_by_category'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

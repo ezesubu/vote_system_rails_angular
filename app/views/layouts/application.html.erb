@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clinica</title>
+  <title>Premios Clínica El Bosque 2015</title>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all'%>
@@ -13,12 +13,19 @@
       <header>
 
         <div class="container" >
+            <div class="col-xs-12 hidden-md hidden-lg">
+              <div class="sub-logo logo-movile">
+                  <div class="img-logo ">
+                    <img class="img-responsive" src="images/logo-full-head.png"/>
+                  </div>
+              </div>
+            </div>
           <div class="col-md-4">
             <div class="logo">
               <img class="img-responsive logo-primary"src="images/logo-head.png"/>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 hidden-xs">
             <div class="sub-logo">
                 <div class="img-logo">
                   <img class="img-responsive" src="images/logo-full-head.png"/>
@@ -28,9 +35,9 @@
               <div class="header-text">
                 <p>Auditorio Principal Universidad El Bosque</p>
                 <p>Viernes 11 de Diciembre</p>
-                <p>5:30 pm. a 1:30 pm.</p>
+                <p>5:30 pm. a 11:00 pm.</p>
               </div>
-              <button type="button" class="btn btn-info btn-nominados" ng-click="fnhideNominate()">VER NOMINADOS</button>
+              <button type="button" class="btn btn-info btn-nominados" ng-click="showAlertConfirmation()">Confirmar Asistencia</button>
             </div>
           </div>
         </div>
@@ -50,7 +57,7 @@
                 <p>Auditorio Principal</p> 
                 <p>Universidad El Bosque</p>
                 <p>Viernes 11 de Diciembre</p>
-                <p>5:30 pm. a 1:30 pm.</p>
+                <p>5:30 pm. a 11:00 pm.</p>
               </div>
              <div class="row">
               <img class="img-responsive logo-footer-full"src="images/logo-full-footer.png"/>
