@@ -8,7 +8,6 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-/vendor/assets/bower_components
 **.orig
 rerun.txt
 pickle-email-*.html
@@ -18,8 +17,8 @@ pickle-email-*.html
 #config/secrets.yml
 
 ## Environment normalisation:
-/.bundle
-/vendor/bundle
+#/.bundle
+#/vendor/bundle
 
 # these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
