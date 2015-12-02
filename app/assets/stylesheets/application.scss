@@ -70,44 +70,12 @@ h1 {
   padding: 15px 25px 10px 25px;
   background-color: $color-sea;
 }
-
-@media (min-width: 980px) {
-  .logo-primary {
-    margin-left: 100px;
-  }
-  .sub-logo {
-    border-bottom: 1px solid #FFF;
-    height: 70px;
-    img {
-      float: right;
-    }
-  }
-}
-
-@media (max-width: 780px) {
-  footer {
-    text-align: center;
-  }
-  .logo-footer,
-  .logo-footer-full,
-  .logo-primary {
-    margin: 0 auto;
-  }
-}
-
-
-header {
-  padding: 15px 0 10px 0;
-}
-
-.intro-text {
-  padding-top: 10px;
-  text-align: center;
-}
-
 .main-content {
-  padding:  0px;
+  padding: 50px 0px;
 }
+
+
+
 
 footer {
   border-top: 6px solid $color-blue;
@@ -152,4 +120,41 @@ footer {
 
 .well-nominante {
   background-color: #FFF;
+}
+
+@media (min-width: 980px) {
+  .logo-primary {
+    margin-left: 100px;
+  }
+  .sub-logo {
+    border-bottom: 1px solid #FFF;
+    height: 70px;
+    img {
+      float: right;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  footer {
+    text-align: center;
+  }
+  .logo-footer,
+  .logo-footer-full,
+  .logo-primary {
+    margin: 0 auto;
+  }
+  .main-content {
+    padding: 0px;
+  }
+  header {
+    padding: 15px 0 10px 0;
+  }
+  .intro-text {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .logo-footer-full{
+    padding-bottom: 20px;
+  }
 }
