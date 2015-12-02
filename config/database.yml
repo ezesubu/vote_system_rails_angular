@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: clinica_production
-  username: clinica
-  password: <%= ENV['CLINICA_DATABASE_PASSWORD'] %>
+  database: db_clinica
+  username: root
+  password: root
