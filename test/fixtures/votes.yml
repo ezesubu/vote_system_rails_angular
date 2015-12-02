@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nominate_id: 1
+  user_identification: 1
+
+two:
+  nominate_id: 1
+  user_identification: 1

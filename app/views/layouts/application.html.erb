@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clinica</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="app">
+    <div  ng-controller="userController">
+      <header>
+
+        <div class="container" >
+          <div class="col-md-4">
+            <div class="logo">
+              <img class="img-responsive logo-primary"src="images/logo-head.png"/>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="sub-logo">
+                <div class="img-logo">
+                  <img class="img-responsive" src="images/logo-full-head.png"/>
+                </div>
+            </div>
+            <div class="intro-text" >
+              <div class="header-text">
+                <p>Auditorio Principal Universidad El Bosque</p>
+                <p>Viernes 11 de Diciembre</p>
+                <p>5:30 pm. a 1:30 pm.</p>
+              </div>
+              <button type="button" class="btn btn-info btn-nominados" ng-click="fnhideNominate()">VER NOMINADOS</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div  class="container">
+        <div class="main-content">
+          <%= yield %>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="col-md-4">
+            <div class="row">
+              <img class="img-responsive logo-footer"src="images/logo-footer.png"/>
+            </div>
+              <div class="row text-footer">
+                <p>Auditorio Principal</p> 
+                <p>Universidad El Bosque</p>
+                <p>Viernes 11 de Diciembre</p>
+                <p>5:30 pm. a 1:30 pm.</p>
+              </div>
+             <div class="row">
+              <img class="img-responsive logo-footer-full"src="images/logo-full-footer.png"/>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <img class="img-responsive" src="images/mapa.png"/>
+          </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+
