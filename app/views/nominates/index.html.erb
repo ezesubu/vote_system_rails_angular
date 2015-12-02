@@ -1,54 +1,54 @@
 <div>
   <div class="row" ng-hide="bolNominate">
-    <div class="col-xs-2">
+    <div class="col-md-2">
        <img class="img-responsive"src="images/ico-nominatios.png"/>
     </div>
-    <div class="col-xs-10">
+    <div class="col-md-10">
        <div class="title">
           <h1 class="nominados">Nominados</h1>
        </div>
     </div>
   </div>
   <div class="row" ng-show="bolNominate">
-    <div class="col-xs-2">
+    <div class="col-md-2">
        <img class="img-responsive"src="images/ico-add.png"/>
     </div>
-    <div class="col-xs-10">
+    <div class="col-md-10">
        <div class="title">
           <h1 class="nominados">Nominar a Alguien</h1>
        </div>
     </div>
   </div>
-   <div class="col-xs-12 text-center" ng-show="bolNominate">
+   <div class="col-md-12 text-center" ng-show="bolNominate">
       <h1>Categoria {{newNominate.category}}</h1>
     </div>
   <div ng-hide="bolNominate">
     <div class="row vertical-center">
-      <div class="col-xs-2 select-category">
+      <div class="col-md-2 select-category">
         <label class="control-label">Escoge la categoria</label>
         <select class="form-control" ng-model="category" ng-change="fnGetNominates(this.category)">
           <option value="1" selected>Categoria 1</option>
           <option value="2" >categoria 2</option>
         </select>
       </div>
-      <div class="col-xs-4 col-md-offset-6 " >
+      <div class="col-md-4 col-md-offset-6 " >
           <button type="button" class="btn btn-info btn-nominados" ng-click="fnshowNominate()">¿Quieres nomiar a alguien?</button> 
       </div>
     </div>
   </div>
   <div class="row" ng-show="bolNominate">
-    <div class="col-xs-4  col-md-offset-4">
+    <div class="col-md-4  col-md-offset-4">
         <form ng-submit="fnSaveData()">
           <div class="row">
-            <div class="col-xs-12">
+            <div class="col-md-12">
               <input type="text" ng-model="newNominate.name" class="form-control" placeholder="Nombre" />
             </div>
-            <div class="col-xs-12 select-category" >
+            <div class="col-md-12 select-category" >
               <label class="control-label">Tú identification</label>
               <input type="text" ng-model="identification" class="form-control" placeholder="Cedula" />
             </div>
             </div>
-            <div class="col-xs-12 select-category">
+            <div class="col-md-12 select-category">
               <label class="control-label">Escoge la categoria</label>
               <select ng-model="newNominate.category"  class="form-control" ng-change="fnGetNominates(this.category)">
                 <option value="1" selected>Categoria 1</option>
@@ -58,7 +58,7 @@
 
           </div>
           <div class="row">
-            <div class="col-xs-12 text-center">
+            <div class="col-md-12 text-center">
               <br />
               <input type="Submit"  value="Nominar" class="btn btn-primary btn-votar" />
             </div>
@@ -68,7 +68,7 @@
   </div>
 
   <div class="row" ng-hide="bolNominate">
-    <div class="col-xs-12 text-center">
+    <div class="col-md-12 text-center">
       <h1>Categoria {{category}}</h1>
     </div>
   </div>
