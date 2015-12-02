@@ -1,7 +1,7 @@
 <div>
   <div class="row" ng-hide="bolNominate">
     <div class="col-md-2">
-       <img class="img-responsive"src="images/ico-nominatios.png"/>
+       <img class="img-responsive hidden-xs"src="images/ico-nominatios.png"/>
     </div>
     <div class="col-md-10">
        <div class="title">
@@ -11,7 +11,7 @@
   </div>
   <div class="row" ng-show="bolNominate">
     <div class="col-md-2">
-       <img class="img-responsive"src="images/ico-add.png"/>
+       <img class="img-responsive hidden-xs"src="images/ico-add.png"/>
     </div>
     <div class="col-md-10">
        <div class="title">
@@ -23,7 +23,7 @@
       <h1>Categoria {{newNominate.category}}</h1>
     </div>
   <div ng-hide="bolNominate">
-    <div class="row vertical-center">
+    <div class="row">
       <div class="col-md-2 select-category">
         <label class="control-label">Escoge la categoria</label>
         <select class="form-control" ng-model="category" ng-change="fnGetNominates(this.category)">
@@ -31,13 +31,13 @@
           <option value="2" >categoria 2</option>
         </select>
       </div>
-      <div class="col-md-4 col-md-offset-6 " >
+      <div class="col-md-4 col-md-offset-6" >
           <button type="button" class="btn btn-info btn-nominados" ng-click="fnshowNominate()">¿Quieres nomiar a alguien?</button> 
       </div>
     </div>
   </div>
   <div class="row" ng-show="bolNominate">
-    <div class="col-md-4  col-md-offset-4">
+    <div class="col-md-4  col-md-offset-6">
         <form ng-submit="fnSaveData()">
           <div class="row">
             <div class="col-md-12">
@@ -90,6 +90,4 @@
       </div>
     </div>
   </div>
-
-  
 </div>
