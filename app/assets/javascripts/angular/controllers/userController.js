@@ -1,7 +1,9 @@
 app.controller("userController", function($scope, Nominate, Vote, User) {
 
   //Bindables
+  
   $scope.category = '1'
+  $scope.bolRequired = false
   $scope.identification = null
     //def functions
   $scope.fnSaveData = fnSaveData;
@@ -34,6 +36,11 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }
 
   function fnSaveData() {
+    
+    if($scope.name == undefined){
+      $scope.bolRequired = true
+      return;
+    }
     var objParams = {
       name: $scope.name,
       category: $scope.category

@@ -48,7 +48,7 @@
     <div class="col-md-4  col-md-offset-4">
         <form ng-submit="fnSaveData()">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" ng-class="{'has-error' : bolRequired}">
               <input type="text" ng-model="name" class="form-control" placeholder="Nombre" />
             </div>
             <div class="col-md-12 select-category" >
