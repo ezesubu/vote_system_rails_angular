@@ -19,6 +19,7 @@ default: &default
 
 development:
   <<: *default
+  host: 52.23.181.153
   database: db_clinica
 
 # Warning: The database defined as "test" will be erased and
