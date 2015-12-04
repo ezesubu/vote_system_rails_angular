@@ -57,6 +57,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }
 
   function fnGetNominates(category) {
+    console.log(category);
     fnValidateVote()
     var objParams = {
       category: category

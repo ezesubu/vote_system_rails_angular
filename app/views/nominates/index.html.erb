@@ -29,7 +29,8 @@
           <select name="source" class="form-control input-sm"
                         ng-model="category"
                         ng-options="s.name for s in categorias track by s.id"
-                        ng-class="form-control">
+                        ng-class="form-control"
+                        ng-click="fnGetNominates(this.category.id)">
                 </select>
       </div>
       <div class="col-md-4 col-md-offset-4" >
