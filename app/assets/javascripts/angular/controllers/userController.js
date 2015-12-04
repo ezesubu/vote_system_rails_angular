@@ -18,7 +18,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
     name: 'Premio a la Calidad Administrativa'
   }, {
     id: 2,
-    name: 'Premio al Desempeño Administrativa'
+    name: 'Premio a la Calidad Asistencial'
   }, {
     id: 3,
     name: 'Premio al Desempeño Asistencial'
