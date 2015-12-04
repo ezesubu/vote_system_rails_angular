@@ -96,14 +96,14 @@
   </div>
   <div class="row" ng-hide="bolNominate">
     <div ng-repeat="nominate in nominates">
-      <div class="col-md-4">
+      <div class="col-md-4" ng-show="nominate.name">
         <div class="well well-nominante">
            <div class="row">
             <div class="col-xs-4">
               <img class="img-responsive" src="images/nominate.png"/>
             </div>
             <div class="col-xs-8">
-              <p>{{nominate.name}}</p>
+              <p class="name_nominate">{{nominate.name }}</p>
               <p>{{nominate.category}}</p>
               <button  class="btn btn-primary btn-votar" ng-show="bolIsNominated"  ng-click="fnAddVote(nominate.id)"/> Votar</button>
 
