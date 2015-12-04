@@ -1,8 +1,8 @@
 app.controller("userController", function($scope, Nominate, Vote, User) {
 
   //Bindables
-  
-  $scope.category = '1'
+
+  $scope.category = {id:1, name: 'Premio a la Calidad Administrativa'}
   $scope.bolRequired = false
   $scope.identification = null
     //def functions
@@ -12,14 +12,47 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   $scope.fnshowNominate = fnshowNominate;
   $scope.fnhideNominate = fnhideNominate;
   $scope.showAlertConfirmation = showAlertConfirmation;
-  var arrAceptedCategory = ['1', '2', '3','4','5','6','7','8','9','10']
+  var arrAceptedCategory = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  $scope.categorias = [{
+    id: 1,
+    name: 'Premio a la Calidad Administrativa'
+  }, {
+    id: 2,
+    name: 'Premio al Desempeño Administrativa'
+  }, {
+    id: 3,
+    name: 'Premio al Desempeño Asistencial'
+  }, {
+    id:4 ,
+    name: 'Premio al Desempeño Administrativa'
+  }, {
+    id:5,
+    name: 'Premio a la Seguridad Administrativa'
+  }, {
+    id:6 ,
+    name: 'Premio a la Seguridad del paciente Asistencial'
+  }, {
+    id:7 ,
+    name: 'Premio al Liderazgo Administrativo'
+  }, {
+    id:8 ,
+    name: 'Premio al Liderazgo Asistencial'
+  }, {
+    id:9 ,
+    name: 'Premio al Espíritu FSB  Admnistrativo'
+  }, {
+    id:10 ,
+    name: 'Premio al Espíritu FSB Asistencial'
+  }
 
-  // Autoinit
+  ];
+
+    // Autoinit
   fnInit();
 
   //functions
   function fnInit() {
-    fnGetNominates($scope.category);
+    fnGetNominates($scope.category.id);
     fnValidateVote();
   }
 
@@ -36,14 +69,14 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }
 
   function fnSaveData() {
-    
-    if($scope.name == undefined){
+
+    if ($scope.name == undefined) {
       $scope.bolRequired = true
       return;
     }
     var objParams = {
       name: $scope.name,
-      category: $scope.category
+      category: $scope.category.id
     };
     if ($scope.identification == null) {
       sweetAlert({
@@ -78,16 +111,16 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
       identification: $scope.identification
     })
     user.$promise.then(function(data) {
-      if(data.id) {
+      if (data.id) {
         var nominate = Nominate.save(objParams)
         nominate.$promise.then(function(data) {
           fnAddVote(data.id)
-          fnGetNominates($scope.category);
+          fnGetNominates($scope.category.id);
         })
         $scope.name = null;
         fnhideNominate()
-      }else{
-          swal("Error!", "Cedula no encontrada", "error");
+      } else {
+        swal("Error!", "Cedula no encontrada", "error");
         return
       }
     })
@@ -161,7 +194,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
     var objParams = {
       nominate_id: nominate_id,
       user_identification: $scope.identification,
-      category: $scope.category
+      category: $scope.category.id
     };
     var user = User.find_by_identificacion({
       identification: $scope.identification
@@ -219,10 +252,10 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }
 
   function fnValidateVote() {
-    $scope.bolIsNominated = false
-    if (arrAceptedCategory.indexOf($scope.category) >= 0) {
-      $scope.bolIsNominated = true
-    }
+    $scope.bolIsNominated = true
+    // if (arrAceptedCategory.indexOf($scope.category.id) >= 0) {
+    //   $scope.bolIsNominated = true
+    // }
   }
 
   function fnshowNominate() {
