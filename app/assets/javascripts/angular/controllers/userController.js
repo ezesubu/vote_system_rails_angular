@@ -43,6 +43,9 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }, {
     id:10 ,
     name: 'Premio al Espíritu FSB Asistencial'
+  }, {
+    id:10 ,
+    name: 'New category'
   }
 
   ];
@@ -162,7 +165,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   }
 
   function fnAddVote(nominate_id) {
-    console.log("la indentificacion:", $scope.identification)
+    
     if ($scope.identification == null) {
       sweetAlert({
         title: "Ingresa identification",
