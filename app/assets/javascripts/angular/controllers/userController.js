@@ -10,7 +10,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
   $scope.fnshowNominate = fnshowNominate;
   $scope.fnhideNominate = fnhideNominate;
   $scope.showAlertConfirmation = showAlertConfirmation;
-  var arrAceptedCategory = ['1', '2', '3']
+  var arrAceptedCategory = ['1', '2', '3','4','5','6','7','8','9','10']
 
   // Autoinit
   fnInit();
