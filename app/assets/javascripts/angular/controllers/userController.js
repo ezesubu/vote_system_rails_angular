@@ -61,7 +61,7 @@ app.controller("userController", function($scope, blockUI, Nominate, Vote, User)
   }
 
   function fnGetNominates(category) {
-    //blockUI.start();
+    blockUI.start();
     fnValidateVote()
     var objParams = {
       category: category
@@ -70,7 +70,7 @@ app.controller("userController", function($scope, blockUI, Nominate, Vote, User)
     promise.$promise.then(function(response) {
       $scope.nominates = response
     })
-    //promise.$promise.finally(blockUI.stop);
+    promise.$promise.finally(blockUI.stop);
   }
 
   function fnSaveData() {
