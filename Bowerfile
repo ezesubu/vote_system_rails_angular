@@ -5,3 +5,4 @@
 asset 'angular'
 asset 'angular-resource'
 asset 'angular-sweetalert'
+asset 'angular-block-ui'

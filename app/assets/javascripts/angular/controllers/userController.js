@@ -1,4 +1,4 @@
-app.controller("userController", function($scope, Nominate, Vote, User) {
+app.controller("userController", function($scope, blockUI, Nominate, Vote, User) {
 
   //Bindables
 
@@ -55,12 +55,13 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
 
   //functions
   function fnInit() {
+
     fnGetNominates($scope.category.id);
     fnValidateVote();
   }
 
   function fnGetNominates(category) {
-    console.log(category);
+    blockUI.start();
     fnValidateVote()
     var objParams = {
       category: category
@@ -69,7 +70,7 @@ app.controller("userController", function($scope, Nominate, Vote, User) {
     promise.$promise.then(function(response) {
       $scope.nominates = response
     })
-
+    promise.$promise.finally(blockUI.stop);
   }
 
   function fnSaveData() {

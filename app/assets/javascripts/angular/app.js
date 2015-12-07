@@ -1,4 +1,4 @@
-var app = angular.module('app', ['templates', 'ngResource', 'oitozero.ngSweetAlert']);
+var app = angular.module('app', ['templates', 'ngResource', 'oitozero.ngSweetAlert', 'blockUI']);
 
 app.config([
     '$httpProvider', function($httpProvider) {

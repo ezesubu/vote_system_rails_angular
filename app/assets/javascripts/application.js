@@ -17,5 +17,6 @@
 //= require angular-rails-templates
 //= require angular-sweetalert/SweetAlert
 //= require sweetalert
+//= require angular-block-ui
 //= require angular/app
 //= require_tree ./angular/controllers
