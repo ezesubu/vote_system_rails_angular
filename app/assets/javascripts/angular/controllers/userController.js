@@ -43,11 +43,7 @@ app.controller("userController", function($scope, blockUI, Nominate, Vote, User)
   }, {
     id:10 ,
     name: 'Premio al Espíritu FSB Asistencial'
-  }, {
-    id:10 ,
-    name: 'New category'
   }
-
   ];
 
     // Autoinit
