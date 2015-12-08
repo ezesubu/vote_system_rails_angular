@@ -12,7 +12,7 @@ app.controller("userController", function($scope, blockUI, Nominate, Vote, User)
   $scope.fnshowNominate = fnshowNominate;
   $scope.fnhideNominate = fnhideNominate;
   $scope.showAlertConfirmation = showAlertConfirmation;
-  var arrAceptedCategory = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  var arrAceptedCategory = ['0']
   $scope.categorias = [{
     id: 1,
     name: 'Premio a la Calidad Administrativa'
@@ -253,10 +253,10 @@ app.controller("userController", function($scope, blockUI, Nominate, Vote, User)
   }
 
   function fnValidateVote() {
-    $scope.bolIsNominated = true
-    // if (arrAceptedCategory.indexOf($scope.category.id) >= 0) {
-    //   $scope.bolIsNominated = true
-    // }
+    $scope.bolIsNominated = false
+     if (arrAceptedCategory.indexOf($scope.category.id) >= 0) {
+       $scope.bolIsNominated = true
+    }
   }
 
   function fnshowNominate() {
